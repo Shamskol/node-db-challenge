@@ -38,13 +38,31 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
+- [x ] Explain the difference between `Relational Databases` and `SQL`.
+A relational database is a database that stores data in a table form, containing columns and rows. It has one or more data categories in columns. Each row, or record, contains a set of data defined by the category, or column.
+A relational database typically has more than one table and they might have interrelation and this relationship will be set via the use of the foreign key.
+In plain term, you can imagine a spreadsheet where each column is a data field and each row is a record, and this spreadsheet can link to another one using a column with unique row values.
 
-- [ ] Why do tables need a `primary key`?
+ But SQL, or Structured Query Language, is the standard language for dealing with Relational Databases. It’s used to perform data interacting tasks such as:
+•	Creating a table and inserting data into it.
+•	Querying and filtering data.
+•	Modifying and updating data.
+•	Delete data or table.
 
-- [ ] What is the name given to a table column that references the primary key on another table.
 
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+- [x ] Why do tables need a `primary key`?
+
+In database design, a primary key is important because it serves as a unique identifier for a row of data in a database table. ... This ensures that each record in the table is distinct from other records, which eliminates the possibility of duplicate data. A primary key is composed of one or several column fields.
+
+- [x ] What is the name given to a table column that references the primary key on another table.
+The name is FOREIGN KEY.
+
+A FOREIGN KEY is a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table. The table containing the foreign key is called the child table, and the table containing the candidate key is called the referenced or parent table.
+
+- [x ] What do we need in order to have a _many to many_ relationship between two tables.
+
+We need join statements. We can use a join to combine query data from multiple tables. Using joins requires that the two tables of interest contain at least one field with shared information.
 
 ## Minimum Viable Product
 
