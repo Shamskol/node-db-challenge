@@ -6,8 +6,8 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex('projects_table').insert([
         { name: "Eating", description: "I'm eating a nice food!" },
-        { name: "Playing soccer" },
-        { name: "Exercising" }
+      { name: "Playing soccer" },
+      { name: "Exercising" }
       ]);
     });
 };

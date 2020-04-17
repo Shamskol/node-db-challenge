@@ -1,8 +1,6 @@
-const db = require(`../data/db-config`);
+const db = require(`../data/dbConfig`);
 
-const convertCompleted = int => {
-  return int ? true : false;
-};
+
 
 const getProjects = () => {
   return db(`projects`).then(projects =>

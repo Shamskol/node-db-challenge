@@ -5,6 +5,7 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('resources_table').insert([
-       { name: `Italian restaurant` }, { name: `Gym`    } ]);
+        { name: `Italian restaurant` }, { name: `Gym` }
+      ]);
     });
 };

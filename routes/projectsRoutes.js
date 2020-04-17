@@ -19,7 +19,7 @@ const validateId = (req, res, next) => {
     })
     .catch(error => {
       console.error(error);
-      res.status(500).json({ errorMessage: `Can't to retrieve project` });
+      res.status(500).json({ errorMessage: `Can't  retrieve project` });
     });
 };
 
