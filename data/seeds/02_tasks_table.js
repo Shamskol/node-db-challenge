@@ -1,15 +1,15 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('tasks_table').del()
+  return knex('tasks_table').truncate()
     .then(function () {
       // Inserts seed entries
       return knex('tasks_table').insert([
-        { description: "Get a nice pizza from the pizza shop" },
-        { description: "Get a nice pasta from the pasta shop" },
-        { description: "I kick" },
-        { description: "I run" },
-        { description: "Lift weights" }
+        { description: "Literature Survey and Background Data Gathering" },
+        { description: "Sample Collection and Field Investigation" },
+        { description: "Laboratory Investigation" },
+        { description: "Data Analysis and Interpretation" },
+        { description: "Report Writing" }
       ]);
     });
 };

@@ -1,6 +1,6 @@
 
 exports.up = function(knex) {
-    return knex.schema.createTable(`tasks`, tbl => {
+    return knex.schema.createTable(`tasks_table`, tbl => {
         tbl.increments();
         tbl.string(`description`, 255).notNullable();
         tbl.string(`notes`, 255);
@@ -13,6 +13,6 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-    return knex.schema.dropTableIfExists(`tasks`);
+    return knex.schema.dropTableIfExists(`tasks_table`);
   
 };
