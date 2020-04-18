@@ -63,7 +63,7 @@ A FOREIGN KEY is a field (or collection of fields) in one table that refers to t
 
 - [x ] What do we need in order to have a _many to many_ relationship between two tables.
 
-We need join statements. We can use a join to combine query data from multiple tables. Using joins requires that the two tables of interest contain at least one field with shared information.
+we need to introduce an intermediary table that holds foreign keys that reference the primary key on the related tables. 
 
 ## Minimum Viable Product
 
