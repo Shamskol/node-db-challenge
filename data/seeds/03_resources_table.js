@@ -1,16 +1,13 @@
-
-exports.seed = function(knex) {
+exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
-  return knex('resources_table').truncate()
+  return knex("resources")
+    .truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('resources_table').insert([
+      return knex("resources").insert([
         { name: `Human` },
-         { name: `Machineries` },
-         {name: "Budget"},
-         {name: "Vehicles"},
-         {name: "Stationeries"}
-
+        { name: `Machineries` },
+        { name: "Vehicles" },
       ]);
     });
 };

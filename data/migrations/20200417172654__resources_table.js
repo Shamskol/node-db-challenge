@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
-    return knex.schema.createTable(`resources_table`, tbl => {
-        tbl.increments();
+    return knex.schema.createTable(`resources`, tbl => {
+        tbl.increments("id");
         tbl.string(`name`, 255).notNullable();
         tbl.string(`description`, 255);
       });
@@ -9,6 +9,6 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-    return knex.schema.dropTableIfExists(`resources_table`);
+    return knex.schema.dropTableIfExists(`resources`);
   
 };

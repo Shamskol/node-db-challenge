@@ -1,15 +1,21 @@
 
-exports.seed = function(knex) {
+exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('tasks_table').truncate()
+  return knex('tasks').truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('tasks_table').insert([
-        { description: "Literature Survey and Background Data Gathering" },
-        { description: "Sample Collection and Field Investigation" },
+      return knex('tasks').insert([
+        { description: "Preliminary Investigation" },
         { description: "Laboratory Investigation" },
-        { description: "Data Analysis and Interpretation" },
-        { description: "Report Writing" }
+        { description: "Clearing and Excavation" },
+        { description: "Asphalt Paving" },
+        { description: "Preparing Estimates and Budget" },
+        { description: "Laying of Pipes" },
+        { description: "Pressure Test" },
+        { description: "Obtaining Planning Permit" },
+        { description: "Installation of Air Samplers" },
+        { description: "Data Analysis and Interpretation" }
+
       ]);
     });
 };

@@ -10,6 +10,7 @@ const validateId = (req, res, next) => {
   const id = req.params.id;
   db.getProjectById(id)
     .then(project => {
+      console.log(project)
       if (project) {
         req.project = project;
         next();

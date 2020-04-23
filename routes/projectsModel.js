@@ -2,25 +2,29 @@ const db = require(`../data/dbConfig`);
 
 
 
+// const getProjects = () => {
+//   return db(`projects`).then(projects =>
+//     projects.map(project => {
+//       return { ...project, completed: convertCompleted(project.completed) };
+//     })
+//   );
+// };
+
 const getProjects = () => {
-  return db(`projects`).then(projects =>
-    projects.map(project => {
-      return { ...project, completed: convertCompleted(project.completed) };
-    })
-  );
-};
+  return db("projects")
+}
 
 const getProjectById = id => {
   return db(`projects`)
-    .where({ id })
+    .where({ id: id })
     .first()
     .then(project => {
-      return { ...project, completed: convertCompleted(project.completed) };
+      return { ...project, completed: (project.completed) };
     });
 };
 
 const getProjectTasks = projectId => {
-  return db(`project_tasks as p`)
+  return db(`projects as p`)
     .where({ project_id: projectId })
     .innerJoin(`tasks as t`, `t.id`, `task_id`)
     .then(tasks =>
