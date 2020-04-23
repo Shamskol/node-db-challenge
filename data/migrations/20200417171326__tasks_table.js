@@ -8,14 +8,15 @@ exports.up = function(knex) {
           .boolean(`completed`)
           .notNullable()
           .defaultTo(false);
-          tbl
-          .integer(`project_id`)
-          .unsigned()
-          .notNullable()
-          .references(`id`)
-          .inTable(`projects`)
-          .onDelete(`CASCADE`)
-          .onUpdate(`CASCADE`);
+
+        //   tbl
+        //   .integer(`project_id`)
+        //   .unsigned()
+        //   .notNullable()
+        //   .references(`id`)
+        //   .inTable(`projects`)
+        //   .onDelete(`CASCADE`)
+        //   .onUpdate(`CASCADE`);
       });
   
 };

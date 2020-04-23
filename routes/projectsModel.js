@@ -24,15 +24,16 @@ const getProjectById = id => {
 };
 
 const getProjectTasks = projectId => {
-  return db(`projects as p`)
+  return db(`project_tasks`)
     .where({ project_id: projectId })
     .innerJoin(`tasks as t`, `t.id`, `task_id`)
-    .then(tasks =>
-      tasks.map(task => {
-        return { ...task, completed: convertCompleted(task) };
-      })
-    );
+    // .then(tasks =>
+    //   tasks.map(task => {
+    //     return { ...task, completed: (task) };
+    //   })
+    // );
 };
+
 
 const getProjectResources = projectId => {
   return db(`project_resources`)

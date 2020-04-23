@@ -17,6 +17,8 @@ exports.up = function(knex) {
           .inTable(`resources`)
           .onDelete(`CASCADE`)
           .onUpdate(`CASCADE`);
+
+          tbl.unique(["project_id", "resource_id"]);
       });
     
   

@@ -2,6 +2,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable(`project_tasks`, tbl => {
         tbl
+        
           .integer(`project_id`)
           .unsigned()
           .notNullable()
@@ -18,6 +19,8 @@ exports.up = function(knex) {
           .inTable(`tasks`)
           .onDelete(`CASCADE`)
           .onUpdate(`CASCADE`);
+
+          tbl.unique(["project_id", "task_id"]);
       });
   
 };
