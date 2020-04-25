@@ -24,21 +24,19 @@ const getProjectById = id => {
 };
 
 const getProjectTasks = projectId => {
-  return db(`project_tasks`)
-    .where({ project_id: projectId })
-    .innerJoin(`tasks as t`, `t.id`, `task_id`)
-    // .then(tasks =>
-    //   tasks.map(task => {
-    //     return { ...task, completed: (task) };
-    //   })
-    // );
+  return db(`tasks as t`)
+  .select(`t.description as task_description`, `t.notes`, `t.completed`, `p.id`, "p.name as project_name")
+  .where({ "p.id":projectId  })
+  .innerJoin(`projects as p`,"p.id"," t.project_id");
 };
+
 
 
 const getProjectResources = projectId => {
   return db(`project_resources`)
+     .select("r.name as resources_name", "r.id",)
     .where({ project_id: projectId })
-    .innerJoin(`resources as r`, `r.id`, `resource_id`);
+    .innerJoin(`resources as r`, `r.id as resource_id`, `resource_id`);
 };
 
 const getResources = () => {
@@ -57,14 +55,14 @@ const getTaskById = id => {
   return db(`tasks as t`)
     .select(`t.description`, `t.notes`, `t.completed`, `p.project_id`)
     .where({ id })
-    .innerJoin(`project_tasks as p`, `p.task_id`, id);
+    .innerJoin(`projects as p`, `p.id`, t.project_id);
 };
 
 const addTask = (data, projectId) => {
   return db(`tasks`)
     .insert(data)
     .then(([id]) =>
-      db(`project_tasks`)
+      db(`tasks`)
         .insert({ task_id: id, project_id: projectId })
         .then(() => getTaskById(id))
     );

@@ -17,7 +17,7 @@ router.get(`/`, (req, res) => {
 
 router.post(`/`, (req, res) => {
   const taskData = req.body;
-  if (taskData.name) {
+  if (taskData.description) {
     db.addTask(taskData)
       .then(task => res.status(201).json(task))
       .catch(error => {
@@ -25,7 +25,7 @@ router.post(`/`, (req, res) => {
         res.status(500).json({ errorMessage: `Unable to add task` });
       });
   } else {
-    res.status(400).json({ message: `Body must contain "name"` });
+    res.status(400).json({ message: `Body must contain name` });
   }
 });
 
