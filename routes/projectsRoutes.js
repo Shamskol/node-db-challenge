@@ -75,7 +75,8 @@ router.post(`/`, (req, res) => {
 router.post(`/:id/task`, validateId, (req, res) => {
   const id = req.project.id;
   const taskData = req.body;
-  if (taskData.project_id = id) {
+  taskData.project_id = id
+  if (taskData.description) {
     db.addTask(taskData, id)
       .then(task => res.status(201).json(task))
       .catch(error => {
