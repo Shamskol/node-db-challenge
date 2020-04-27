@@ -2,7 +2,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable(`resources`, tbl => {
         tbl.increments("id");
-        tbl.string(`name`, 255).notNullable();
+        tbl.string(`name`, 255).notNullable().unique();
         tbl.string(`description`, 255);
       });
   
