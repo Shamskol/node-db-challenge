@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('projects').insert([
-        { name: "Environmental Impact Assessment", description: "I'm gathering baseline data!" },
+        { name: "Environmental Impact Assessment", description: "athering baseline data!" },
       { name: "Water Quality Studies", description: "Ensuring adequate water supply"},
       { name: "Air Quality Survey", description:"Reducing Carbon emissions" },
       {name: "Road Construction", description: "Improved road network and transportation"},
