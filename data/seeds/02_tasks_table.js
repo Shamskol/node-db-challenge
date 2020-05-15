@@ -15,7 +15,7 @@ exports.seed = function(knex, Promise) {
         { description: "Obtaining Planning Permit", project_id: 5 },
         { description: "Installation of Air Samplers", project_id: 3 },
         { description: "Data Analysis and Interpretation", project_id: 3 },
-        
+        {description: "Social distancing and distribution of PPE", project_id: 6}
         
       ]);
     });
