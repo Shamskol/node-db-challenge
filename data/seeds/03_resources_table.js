@@ -8,6 +8,9 @@ exports.seed = function (knex, Promise) {
         { name: `Human` },
         { name: `Machineries` },
         { name: "Vehicles" },
+        {name: "Personal Protective Equipment"},
+        {name: "Health Professionals-doctors, nurses and social workers"},
+        {name: "Computers"}
       ]);
     });
 };
