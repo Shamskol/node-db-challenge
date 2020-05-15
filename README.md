@@ -80,7 +80,7 @@ Complete the following tasks:
   - [x ] when adding a `task` the client must provide a description, the notes are optional.
   - [ x] when adding a `task` the client must provide the `id` of an existing project.
   - [x ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
-- [ ] Build an API with endpoints for:
+- [x ] Build an API with endpoints for:
   - [x ] adding resources.
   - [x ] retrieving a list of resources.
   - [x ] adding projects.
@@ -109,8 +109,8 @@ A `task` one of the steps needed to complete the project. We want to store the f
 
 - [ x] a unique ID.
 - [x ] a description of what needs to be done. This column is required.
-- [ xx] a notes column to add additional information.
-- [ ] a boolean that indicates if the task has been completed. This column cannot be NULL, the default value should be `false`.
+- [ x] a notes column to add additional information.
+- [ x] a boolean that indicates if the task has been completed. This column cannot be NULL, the default value should be `false`.
 
 ## Stretch Problem
 
